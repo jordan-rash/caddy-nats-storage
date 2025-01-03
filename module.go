@@ -12,7 +12,7 @@ var (
 )
 
 func init() {
-	caddy.RegisterModule(Nats{})
+	caddy.RegisterModule(&Nats{})
 }
 
 func (n *Nats) Provision(ctx caddy.Context) error {
@@ -59,7 +59,7 @@ func (n *Nats) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	return nil
 }
 
-func (Nats) CaddyModule() caddy.ModuleInfo {
+func (*Nats) CaddyModule() caddy.ModuleInfo {
 	return caddy.ModuleInfo{
 		ID: "caddy.storage.nats",
 		New: func() caddy.Module {

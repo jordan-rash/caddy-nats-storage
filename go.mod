@@ -1,6 +1,6 @@
-module github.com/HeavyHorst/certmagic-nats
+module github.com/jordan-rash/caddy-nats-storage
 
-go 1.20
+go 1.23
 
 require (
 	github.com/caddyserver/caddy/v2 v2.7.5
